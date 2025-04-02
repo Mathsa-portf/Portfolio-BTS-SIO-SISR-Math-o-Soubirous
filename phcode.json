@@ -1,0 +1,7 @@
+{
+    "livePreviewUseDevServer": false,
+    "livePreviewServerProjectPath": "C:\\xampp\\htdocs",
+    "livePreviewHotReloadSupported": false,
+    "livePreviewFramework": "Custom",
+    "livePreviewServerURL": "http://localhost/portfolio"
+}

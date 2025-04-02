@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentation</title>
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <!-- Ici, on inclut un lien pour revenir à l'accueil si besoin -->
+        <li><a href="index.html" class="active" onclick="openPage(event)">Accueil</a></li>
+        <li><a href="documentation.html">Documentation</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="documentation">
+      <h1>Documentation</h1>
+    </section>
+      <h2>Clique sur une image pour afficher le PDF correspondant.</h2>
+      <div class="doc-gallery">
+        <img src="C:\xampp\htdocs\portfolio\image\pfsense.jpg" alt="Document 1" class="doc-img" data-pdf="C:\xampp\htdocs\portfolio\pdf\CV.pdf">
+        <img src="C:\xampp\htdocs\portfolio\image\cisco_vlan.jpg" alt="Document 2" class="doc-img" data-pdf="file:///C:/xampp/htdocs/portfolio/pdf/Proc%C3%A9dure_cr%C3%A9ation_de_vlan_sur_un_Switch_ou_un_routeur.pdf">
+      </div>
+  </main>
+
+  <!-- Modal pour l'aperçu du PDF -->
+  <div id="pdfModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <iframe id="pdfPreview" title="Aperçu du document PDF" class="pdf-preview" src="about:blank"></iframe>
+      <div class="modal-buttons">
+        <button id="openPdfBtn">Ouvrir le PDF</button>
+        <button id="downloadPdfBtn">Télécharger le PDF</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

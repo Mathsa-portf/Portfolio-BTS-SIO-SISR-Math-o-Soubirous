@@ -1,0 +1,210 @@
+/* styles.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+}
+
+/* Sidebar Styles */
+header {
+    background: #2e2c4b;
+    color: #fff;
+    height: 100vh;
+    width: 250px;
+    padding: 20px 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+header nav ul li {
+    margin: 20px 0;
+    text-align: left;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background 0.3s, color 0.3s;
+}
+
+header nav ul li a i {
+    font-size: 1.3rem;
+}
+
+header nav ul li a:hover {
+    color: #1e90ff;
+    background: #403d63;
+    border-radius: 4px;
+}
+
+header nav ul li a.active {
+    color: #ff7b54;
+}
+
+/* Main Content */
+main {
+    margin-left: 260px;
+    padding: 50px 20px;
+    flex: 1;
+}
+
+#hero h1 {
+    font-size: 2.5rem;
+    color: rebeccapurple;
+}
+
+#about, #competence, #projects, #doc, #veilles { /*en tête section*/
+    padding: 50px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#accueil, #documentation { /*en tête principal*/
+    background: #2e2c4b;
+    color: #ff7b54;
+    text-align: center;
+    margin: -8px 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+section h2 {
+    color: #1e90ff;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #1e90ff;
+    margin-bottom: 20px;
+}
+
+.paragraphe {
+    background: #f9f9f9;
+    margin: 50px 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    border: 2px solid gray;
+}
+
+.project h3 {
+    margin-top: 0;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;  /* Réduit la marge intérieure */
+    background: #222;
+    color: #fff;
+    font-size: 12px;  /* Réduit la taille du texte */
+    position: relative;
+    bottom: 0;
+    width: 10%;
+    margin: 10px
+}
+
+/* Icons Styling */
+nav ul li a i {
+    width: 20px;
+    text-align: center;
+}
+
+/* Add font-awesome icons */
+.fa-home::before { content: '\f015'; }
+.fa-user::before { content: '\f007'; }
+.fa-graduation-cap::before { content: '\f19d'; }
+.fa-folder::before { content: '\f07b'; }
+.fa-newspaper::before { content: '\f1ea'; }
+.fa-envelope::before { content: '\f0e0'; }
+.fa-book::before { content: '\f02d'; }
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 800px;
+  position: relative;
+}
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #aaa;
+  cursor: pointer;
+}
+.close:hover {
+  color: #000;
+}
+.pdf-preview {
+  width: 100%;
+  height: 500px;
+  border: none;
+}
+.modal-buttons {
+  margin-top: 10px;
+  text-align: center;
+}
+.modal-buttons button {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+
+.doc-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+.doc-gallery img {
+  width: 200px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.doc-gallery img:hover {
+  transform: scale(1.05);
+}
+
+
+

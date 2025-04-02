@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio BTS SISR">
+    <title>Portfolio BTS SISR</title>
+    <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#accueil" class="active"><i class="fa-solid fa-home"></i> Accueil</a></li>
+                
+                <li><a href="#about"><i class="fa-solid fa-user"></i> À Propos</a></li>
+                               
+                <li><a href="#competence"><i class="fa-solid fa-folder"></i> Compétence</a></li>
+                
+                <li><a href="#projects"><i class="fa-solid fa-book"></i> Projets</a></li>
+                
+                <li><a href="documentation.html" onclick="scrollToSection(event, 'doc')"><i class="fa-solid fa-book"></i> Documentation</a></li>
+                
+                <li><a href="#veilles"><i class="fa-solid fa-newspaper"></i> Veilles</a></li>
+                
+                <li><a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+                
+                <li><a href="#e4"><i class="fa-solid fa-book"></i> Epreuve E4</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="accueil">
+            <h1>Bienvenue sur mon portfolio</h1>
+            <p>Alternant en BTS SIO SISR</p>
+        </section>
+
+        <section id="about">
+            <h2>À propos de moi</h2>
+            <div class="paragraphe">
+            <p>Je m'appelle Mathéo Soubirous, je suis âgé de 19 ans je suis actuellement étudiant à l'académie vaucluse provence au campus de Pertuis en deuxième année de BTS « SIO spécialité SISR » 
+                Services Informatiques aux Organisations spécialité en Solutions d'Infrastructure, Systèmes et Réseaux. je viens d'un bac général avec comme spécialité Maths et NSI. 
+                Plus intéressé par des études dans l'informatique que par des études dans le domaine des Mathématiques, je me suis alors orienté dans ce domaine et plus précisément dans le réseau.
+                Je compte continué mes études avec un BAC + 3 DSNS Développeur de Solutions Numériques Sécurisées et surement pousuivre mes études jusqu'au BAC + 5.</p>
+            </div>
+        </section>
+        
+        <section id="competence">
+            <h2>Mes compétences</h2>
+            <div class="paragraphe">
+            <p><strong>Au cours de ma formation j'ai pu acquérir des compétences dans différents domaine comme :</strong></p>
+                
+            <p><strong>la virtualisation avec :</strong>
+                <br>-Hyper-V : Virtualisation sur Windows Serveur pour la gestion d'infrastructures virtualisées.
+                <br>-VirtualBox : Tests et simulations d’environnements sur machine locale.
+                <br>-Proxmox : Déploiement de machines virtuelles et de conteneurs en environnement Linux.
+                <br>-ESXi : Virtualisation d’entreprise avec VMware, découverte et gestion via vSphere
+            </p>
+                
+            <p><strong>Windows avec :</strong>
+                <br>-Installation et configuration de windows serveur comme un serveur ADDS et DNS 
+                <br>-Utilisation de Scipt Powershell
+                <br>-Découverte de WSUS
+                </p>
+                
+            <p><strong>Linux avec :</strong>
+                <br>-Installation et configuration de différente distribution comme Debian, Ubuntu et Kali
+                <br>-Mise en place et configuration de UFW
+                <br>-Mise en place et configuration de Fail2Ban
+            </p>
+                
+            <p><strong>réseau avec :</strong>
+                <br>-Configuration de Switch et de routeur (Nortel, HP, Aruba, Cisco)
+                <br>-Déploiment de VLAN sur des Switchs et routeur
+                <br>-Configuration du protocol SNMP v2 et v3 
+                <br>-Brassage dans une baie informatique
+                <br>-Configuration et mise en service de borne Wifi
+            </p>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Mes projets</h2>
+            <div class="paragraphe">
+                <h3>Projet 1 : Migration des adresse réseau d'une partie des appareil et de tous les Switchs</h3>
+                <p>Pour ce projet j'avais pour mission de Migrer une parie des appareils et tous les Switchs de l'hopital dans les nouveau Vlan qui leurs était attribué.
+                <br>Pour les appareils c'était assez simple j'avais seulement besoin de leurs adresse mac et le port du switch sur lesquels ils étaient branché, avec l'adresse mac il fallait faire
+                    une réservasion sur le serveur dhcp et esuite changer le Vlan sur le port du Switch. Après j'avais juste à vérifier que l'appareil était sur la bonne adresse.
+                <br>Ensuite pour les Switches cela m'a demandé un peu plus de travail, le premier problème est qu'il y a plusieurs modèle de Switch différent et dont des Switch "instant On". De plus les Switchs 
+                que je devais migrer étaient en production et sont donc un peu plus critique qu'un seul pc ou une imprimante. J'ai du pour cela faire des test sur des Switchs que nous avions en stock. 
+                J'ai du trouver toutes les commandes enconsole qui me permettrait de faire la migration IP des Switchs et pour les Switchs "Instant On" j'ai du tous faire en Web en 
+                comprennant l'ordre dans lequelle je pourrait modifier sans perdre la main sur les Switchs que se soit en console ou en web. Il y a 2 étape que j'ai du faire avant de pouvoir aller modifier les 
+                IP des Switchs qui sont de repérer tous les ports d'interconnexion de l'infra réseau et ensuite de créer et d'acheminer le nouveau Vlan sur tous les Switchs.
+                </p>
+            </div>
+            <div class="paragraphe">
+                <h3>Projet 2 : Renouvellement de l'infrastructure de stockage</h3>
+                <p>Pour ce projet nous devions changer notre infrastructure de stockage de l'hopital.
+                <br>nous avons du commencer par faire un dossier des besoins et attentes pour faire un appel d'offre.
+                Une fois les prestataire choisi et le matériel arrivé nous avont pu racker différent serveur, lecteur de bandes, Switchs de stockages et NAS. Avec ce renouvellement d'infra nous avons 
+                choisi DataCore comme solution de virtualisation de stockage. Un nouveau serveur Vsphere a été fait et nous avons ensuite du créer pour toute les VM de l'hopital un Datastore pour ensuite 
+                pouvoir migrer toutes les VM sur le nouveau vsphere et mettre toutes les VM sur leur bon Datastore.</p>
+            </div>
+        </section>
+
+       <section id="doc">
+            <h2>Ma Documentation</h2>
+            <div class="paragraphe">
+                <p>Voici la section documentation <a href="documentation.html">cliquez ici</a> pour la consulter.</p>
+            </div>
+        </section>
+        
+        <section id="veilles">
+            <h2>Veilles informatique</h2>
+            <div class="paragraphe">
+            <p>Durant ma formation en BTS SISR, j'ai pu développer les compétences suivantes :</p>
+            <ul>
+                <li>Administration réseau : configuration de switchs, routeurs et sécurisation du réseau.</li>
+                <li>Virtualisation : mise en place et gestion de machines virtuelles avec VMware et Hyper-V.</li>
+            </ul>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p></p>
+            <ul>
+                <li>Email : <a href="mailto:matheosoubirous115@gmail.com">matheosoubirous115@gmail.com  </a></li>
+                <li>LinkedIn : <a href="https://www.linkedin.com" target="_blank">Mon profil LinkedIn</a></li>
+            </ul>
+        </section>
+
+        <section id="e4">
+            <h2>Epreuve E4</h2>
+            <p>L'épreuve E4 est une partie importante du BTS SISR, axée sur l'analyse et la réalisation d'un projet professionnel. J'ai participé à plusieurs projets qui m'ont permis de mettre en pratique mes compétences techniques et organisationnelles.</p>
+            <p>Ce travail a inclus la résolution de problèmes complexes, la rédaction de documents techniques et la mise en place de solutions innovantes pour répondre aux besoins spécifiques d'une entreprise.</p>
+        </section>
+    </main>
+
+<script src="script.js"></script>
+</body>
+</html>
